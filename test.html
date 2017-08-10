@@ -1,0 +1,39 @@
+<script type="text/javascript">
+    var pass = "70,65,85,88,32,80,65,83,83,87,79,82,68,32,72,65,72,65";
+    var pass_enc = 'h';
+    var tab  = pass_enc.split(',');
+    var tab2 = pass.split(',');
+    var i,j,k,l=0,m,n,o,p = "";
+    // tab == 70,65,85,88,32,80,65,83,83,87,79,82,68,32,72,65,72,65
+    i = 0;
+    j = tab.length;
+    k = j + (l) + (n=0);
+    n = tab2.length;
+    //i==0,j==1,k==1,n==18
+    //alert(n);
+    for(i = (o=0); i < (k = j = n); i++ ){o = tab[i-l];p += String.fromCharCode((o = tab2[i]));
+        if(i == 5)break;
+    }
+    //document.write(p)==> p==FFAFAUFAUXFAUX
+    for(i = (o=0); i < (k = j = n); i++ ){
+        o = tab[i-l];
+        if(i > 5 && i < k-1)
+            p += String.fromCharCode((o = tab2[i]));
+        //document.write(p)
+    }
+    //document.write(p)==> p==FAUX PFAUX PFAUX PFAUX PFAUX PFAUX PFAUX PAFAUX PASFAUX PASSFAUX PASSWFAUX PASSWOFAUX PASSWORFAUX PASSWORDFAUX PASSWORD FAUX PASSWORD HFAUX PASSWORD HAFAUX PASSWORD HAHFAUX PASSWORD HAH
+    p += String.fromCharCode(tab2[17]);
+    //document.write(eval(eval(p)));
+    alert("\x35\x35\x2c\x35\x36\x2c\x35\x34\x2c\x37\x39\x2c\x31\x31\x35\x2c\x36\x39\x2c\x31\x31\x34\x2c\x31\x31\x36\x2c\x31\x30\x37\x2c\x34\x39\x2c\x35\x30".split(',').map(function(v) {
+        return String.fromCharCode(v);
+    }).join(''));
+    //document.write(p)==> p==FAUX PASSWORD HAHA
+
+    //alert(k);
+    //print([i,j,k,l,m,n,o,p]) ;
+    /*
+    for(i=0;i=18;i++){
+     */
+    //h = window.prompt('Entrez le mot de passe / Enter password');
+    //document.write(h);
+</script>
